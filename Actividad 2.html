@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <script>
+        // Función que cambia el color de fondo de la página
+        function cambiarColorFondo() {
+            // Arreglo de colores
+            var colores = ["#FF5733", "#33FF57", "#3357FF", "#FF33A6", "#F3FF33", "#33FFF3"];
+
+            // Variable para guardar el color seleccionado
+            var colorSeleccionado;
+
+            // Ciclo for que recorre todos los colores del arreglo
+            for (var i = 0; i < colores.length; i++) {
+                // Selecciona un color aleatorio del arreglo
+                var indiceAleatorio = Math.floor(Math.random() * colores.length);
+
+                // Asigna el color seleccionado al color de fondo
+                colorSeleccionado = colores[indiceAleatorio];
+
+                // Sale del ciclo (puedes seguir iterando si lo deseas)
+                break;
+            }
+
+            // Cambia el color de fondo usando el color seleccionado
+            document.body.style.backgroundColor = colorSeleccionado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Haz clic en el botón para cambiar el color de fondo</h1>
+    
+    <!-- Botón que ejecuta la función al hacer clic -->
+    <button onclick="cambiarColorFondo()">Cambiar Color</button>
+</body>
+</html>
